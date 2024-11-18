@@ -1,3 +1,4 @@
-pub mod bubble;
-pub mod insert;
+mod bubble;
+mod insert;
+mod quick;
 mod test;
