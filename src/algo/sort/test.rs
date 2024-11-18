@@ -1,7 +1,7 @@
 #[cfg(test)]
 mod tests {
     use super::*;
-    use crate::algo::sort::{bubble, insert, quick};
+    use crate::algo::sort::{bubble, insert, merge, quick};
 
     #[test]
     fn test_bubble_sort() {
@@ -22,6 +22,13 @@ mod tests {
         test_sort_i32(quick::sort);
         test_sort_f64(quick::sort);
         test_sort_char(quick::sort);
+    }
+
+    #[test]
+    fn test_merge_sort() {
+        test_sort_i32(merge::sort);
+        test_sort_f64(merge::sort);
+        test_sort_char(merge::sort);
     }
 
     fn test_sort_i32<F>(mut sort_fn: F)
