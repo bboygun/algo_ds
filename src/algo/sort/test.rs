@@ -1,41 +1,48 @@
 #[cfg(test)]
 mod tests {
     use super::*;
-    use crate::algo::sort::{bubble, insert, merge, quick, select};
+    use crate::algo::sort;
 
     #[test]
     fn test_bubble_sort() {
-        test_sort_i32(bubble::sort);
-        test_sort_f64(bubble::sort);
-        test_sort_char(bubble::sort);
+        test_sort_i32(sort::bubble_sort::sort);
+        test_sort_f64(sort::bubble_sort::sort);
+        test_sort_char(sort::bubble_sort::sort);
     }
 
     #[test]
     fn test_insert_sort() {
-        test_sort_i32(insert::sort);
-        test_sort_f64(insert::sort);
-        test_sort_char(insert::sort);
+        test_sort_i32(sort::insert_sort::sort);
+        test_sort_f64(sort::insert_sort::sort);
+        test_sort_char(sort::insert_sort::sort);
     }
 
     #[test]
     fn test_quick_sort() {
-        test_sort_i32(quick::sort);
-        test_sort_f64(quick::sort);
-        test_sort_char(quick::sort);
+        test_sort_i32(sort::quick_sort::sort);
+        test_sort_f64(sort::quick_sort::sort);
+        test_sort_char(sort::quick_sort::sort);
     }
 
     #[test]
     fn test_merge_sort() {
-        test_sort_i32(merge::sort);
-        test_sort_f64(merge::sort);
-        test_sort_char(merge::sort);
+        test_sort_i32(sort::merge_sort::sort);
+        test_sort_f64(sort::merge_sort::sort);
+        test_sort_char(sort::merge_sort::sort);
     }
 
     #[test]
     fn test_select_sort() {
-        test_sort_i32(select::sort);
-        test_sort_f64(select::sort);
-        test_sort_char(select::sort);
+        test_sort_i32(sort::select_sort::sort);
+        test_sort_f64(sort::select_sort::sort);
+        test_sort_char(sort::select_sort::sort);
+    }
+
+    #[test]
+    fn test_heap_sort() {
+        test_sort_i32(sort::heap_sort::sort);
+        test_sort_f64(sort::heap_sort::sort);
+        test_sort_char(sort::heap_sort::sort);
     }
 
     fn test_sort_i32<F>(mut sort_fn: F)

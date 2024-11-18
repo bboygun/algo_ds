@@ -1,7 +1,8 @@
-mod bubble;
-mod insert;
-mod merge;
-mod quick;
-mod select;
+pub mod bubble_sort;
+pub mod heap_sort;
+pub mod insert_sort;
+pub mod merge_sort;
+pub mod quick_sort;
+pub mod select_sort;
 
 mod test;
