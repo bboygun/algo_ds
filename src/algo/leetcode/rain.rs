@@ -37,14 +37,14 @@ fn double_pointer(arr: &[u32]) -> u32 {
     let mut ans = 0;
 
     while left <= right {
+        left_max = left_max.max(arr[left]);
+        right_max = right_max.max(arr[right]);
         if left_max < right_max {
             ans += left_max - arr[left];
             left += 1;
-            left_max = left_max.max(arr[left]);
         } else {
             ans += right_max - arr[right];
             right -= 1;
-            right_max = right_max.max(arr[right]);
         }
     }
     ans
