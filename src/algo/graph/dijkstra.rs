@@ -1,9 +1,15 @@
 use crate::ds::heap::min_heap::MinHeap;
 
-#[derive(PartialEq, PartialOrd, Clone, Copy)]
+#[derive(PartialEq, Clone, Copy)]
 struct NodeInfo {
     index: usize,
     distance: usize,
+}
+
+impl PartialOrd for NodeInfo {
+    fn partial_cmp(&self, other: &Self) -> Option<std::cmp::Ordering> {
+        self.distance.partial_cmp(&other.distance)
+    }
 }
 
 pub fn dijkstra(graph: &Vec<Vec<i32>>, source: usize) -> Vec<usize> {
