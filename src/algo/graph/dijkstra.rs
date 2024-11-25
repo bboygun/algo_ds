@@ -1,20 +1,34 @@
+use crate::ds::heap::min_heap::MinHeap;
+
+#[derive(PartialEq, PartialOrd, Clone, Copy)]
+struct NodeInfo {
+    index: usize,
+    distance: usize,
+}
+
 pub fn dijkstra(graph: &Vec<Vec<i32>>, source: usize) -> Vec<usize> {
     let node_num = graph.len();
     let mut distance = vec![usize::MAX; node_num];
     distance[source] = 0;
 
-    let mut queue = vec![];
-    queue.push(source);
+    let mut heap = MinHeap::new();
+    heap.insert(NodeInfo {
+        index: source,
+        distance: 0,
+    });
 
-    while !queue.is_empty() {
-        let node = queue.remove(0);
-        let adjacency_list = find_adjacency(&graph, node);
+    while heap.size() != 0 {
+        let node = heap.extract_min().unwrap();
+        let adjacency_list = find_adjacency(&graph, node.index);
         adjacency_list.iter().for_each(|&adjacency| {
-            let d_source_node = distance[node];
-            let d_node_adjacency = get_distance(&graph, node, adjacency);
+            let d_source_node = distance[node.index];
+            let d_node_adjacency = get_distance(&graph, node.index, adjacency);
             if d_source_node + d_node_adjacency < distance[adjacency] {
                 distance[adjacency] = d_source_node + d_node_adjacency;
-                queue.push(adjacency);
+                heap.insert(NodeInfo {
+                    index: adjacency,
+                    distance: distance[adjacency],
+                });
             }
         });
     }
