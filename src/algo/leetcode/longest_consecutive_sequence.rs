@@ -15,6 +15,8 @@
 // 0 <= nums.length <= 105
 // -109 <= nums[i] <= 109
 
+use std::collections::HashSet;
+
 fn longest_consecutive(nums: Vec<i32>) -> i32 {
     let mut nums = nums;
     sort_method(&mut nums)
@@ -42,6 +44,30 @@ fn sort_method(nums: &mut Vec<i32>) -> i32 {
     max_ans
 }
 
+fn hash_method(nums: &Vec<i32>) -> i32 {
+    let mut set = HashSet::new();
+
+    for num in nums {
+        set.insert(*num);
+    }
+
+    let mut max = 0;
+    for &num in nums {
+        if set.contains(&(num - 1)) {
+            continue;
+        }
+        let mut cur = num;
+        let mut len = 1;
+        while set.contains(&(cur + 1)) {
+            len += 1;
+            cur += 1;
+        }
+        max = max.max(len);
+    }
+
+    max
+}
+
 #[cfg(test)]
 mod tests {
 
@@ -52,6 +78,14 @@ mod tests {
         let (mut case, ans) = get_case();
         for i in 0..case.len() {
             assert_eq!(sort_method(&mut case[i]), ans[i]);
+        }
+    }
+
+    #[test]
+    fn hash_method_test() {
+        let (case, ans) = get_case();
+        for i in 0..case.len() {
+            assert_eq!(hash_method(&case[i]), ans[i]);
         }
     }
 
