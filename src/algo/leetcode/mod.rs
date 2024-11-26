@@ -1,4 +1,5 @@
 mod alternating_groups;
+mod container_with_most_water;
 mod group_anagrams;
 mod longest_consecutive_sequence;
 mod move_zeroes;
