@@ -1,3 +1,5 @@
+use std::fs::read;
+
 fn double_array(arr: &[u32]) -> u32 {
     let length = arr.len();
     let mut left_max = vec![0; length];
@@ -44,7 +46,11 @@ fn double_pointer(arr: &[u32]) -> u32 {
             left += 1;
         } else {
             ans += right_max - arr[right];
-            right -= 1;
+            let sub = right.checked_sub(1);
+            if sub.is_none() {
+                break;
+            }
+            right = sub.unwrap();
         }
     }
     ans
@@ -104,9 +110,13 @@ mod tests {
         let height2 = [4, 2, 0, 3, 2, 5];
         let ans2 = 9;
 
+        let height3 = [0];
+        let ans3 = 0;
+
         let mut vec: Vec<(Vec<u32>, u32)> = Vec::new();
         vec.push((height1.into(), ans1));
         vec.push((height2.into(), ans2));
+        vec.push((height3.into(), ans3));
         vec
     }
 }
