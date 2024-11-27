@@ -8,5 +8,6 @@ mod move_zeroes;
 mod network_delay;
 mod prime_count;
 mod rain;
+mod subarray_sum_equals_k;
 mod three_sum;
 mod two_sum;
