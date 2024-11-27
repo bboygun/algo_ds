@@ -6,4 +6,5 @@ mod move_zeroes;
 mod network_delay;
 mod prime_count;
 mod rain;
+mod three_sum;
 mod two_sum;
