@@ -1,4 +1,4 @@
-use crate::ds::heap::min_heap::MinHeap;
+use crate::ds::heap::MinHeap;
 
 pub fn sort<T>(arr: &mut [T])
 where
