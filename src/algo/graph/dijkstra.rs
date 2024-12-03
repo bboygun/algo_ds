@@ -1,4 +1,4 @@
-use crate::ds::heap::min_heap::MinHeap;
+use crate::ds::heap::MinHeap;
 
 #[derive(PartialEq, Clone, Copy)]
 struct NodeInfo {
