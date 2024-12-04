@@ -5,6 +5,7 @@ mod group_anagrams;
 mod longest_consecutive_sequence;
 mod longest_substring_without_repeating_characters;
 mod maximum_subarray;
+mod merge_intervals;
 mod minimum_window_substring;
 mod move_zeroes;
 mod network_delay;
