@@ -4,6 +4,7 @@ mod find_all_anagrams_in_a_string;
 mod group_anagrams;
 mod longest_consecutive_sequence;
 mod longest_substring_without_repeating_characters;
+mod maximum_subarray;
 mod minimum_window_substring;
 mod move_zeroes;
 mod network_delay;
