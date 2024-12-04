@@ -17,9 +17,7 @@
 // 0 <= starti <= endi <= 10^4
 
 fn merge(intervals: Vec<Vec<i32>>) -> Vec<Vec<i32>> {
-    // if intervals.len() == 1 {
-    //     return intervals;
-    // }
+    // 先按开始排序
     let mut intervals = intervals;
     intervals.sort_by_key(|v| v[0]);
 
@@ -27,11 +25,13 @@ fn merge(intervals: Vec<Vec<i32>>) -> Vec<Vec<i32>> {
     let mut cur_interval = intervals[0].clone();
     for interval in intervals {
         let (start, end) = (interval[0], interval[1]);
+        // 若新区间在当前区间之后，则将当前区间加入答案后进行更新
         if start > cur_interval[1] {
             ans.push(cur_interval);
             cur_interval = interval;
             continue;
         }
+        // 若新区间超出了当前区间，进行合并
         if end > cur_interval[1] {
             cur_interval = vec![cur_interval[0], end];
         }
