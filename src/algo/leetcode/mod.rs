@@ -11,6 +11,7 @@ mod move_zeroes;
 mod network_delay;
 mod prime_count;
 mod rain;
+mod rotate_array;
 mod sliding_window_maximum;
 mod subarray_sum_equals_k;
 mod three_sum;
