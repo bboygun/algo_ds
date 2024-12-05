@@ -10,6 +10,7 @@ mod minimum_window_substring;
 mod move_zeroes;
 mod network_delay;
 mod prime_count;
+mod product_of_array_except_self;
 mod rain;
 mod rotate_array;
 mod sliding_window_maximum;
