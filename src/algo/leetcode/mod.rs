@@ -14,6 +14,7 @@ mod prime_count;
 mod product_of_array_except_self;
 mod rain;
 mod rotate_array;
+mod set_matrix_zeroes;
 mod sliding_window_maximum;
 mod subarray_sum_equals_k;
 mod three_sum;
