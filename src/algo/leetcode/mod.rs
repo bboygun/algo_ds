@@ -16,6 +16,7 @@ mod rain;
 mod rotate_array;
 mod set_matrix_zeroes;
 mod sliding_window_maximum;
+mod spiral_matrix;
 mod subarray_sum_equals_k;
 mod three_sum;
 mod two_sum;
