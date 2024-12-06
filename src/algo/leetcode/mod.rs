@@ -1,6 +1,7 @@
 mod alternating_groups;
 mod container_with_most_water;
 mod find_all_anagrams_in_a_string;
+mod first_missing_positive;
 mod group_anagrams;
 mod longest_consecutive_sequence;
 mod longest_substring_without_repeating_characters;
