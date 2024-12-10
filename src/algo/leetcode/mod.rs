@@ -15,6 +15,7 @@ mod product_of_array_except_self;
 mod rain;
 mod rotate_array;
 mod rotate_image;
+mod search_at_2d_matrix;
 mod set_matrix_zeroes;
 mod sliding_window_maximum;
 mod spiral_matrix;
