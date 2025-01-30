@@ -12,6 +12,7 @@ mod minimum_window_substring;
 mod move_zeroes;
 mod network_delay;
 mod number_of_islands;
+mod permutations;
 mod prime_count;
 mod product_of_array_except_self;
 mod rain;
