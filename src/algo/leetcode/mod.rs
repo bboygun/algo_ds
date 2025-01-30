@@ -24,4 +24,5 @@ mod sliding_window_maximum;
 mod spiral_matrix;
 mod subarray_sum_equals_k;
 mod three_sum;
+mod trie;
 mod two_sum;
