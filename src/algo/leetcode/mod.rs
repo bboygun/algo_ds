@@ -1,4 +1,5 @@
 mod alternating_groups;
+mod combination_sum;
 mod container_with_most_water;
 mod course_schedule;
 mod find_all_anagrams_in_a_string;
