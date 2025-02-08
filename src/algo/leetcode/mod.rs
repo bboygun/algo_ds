@@ -31,3 +31,4 @@ mod subset;
 mod three_sum;
 mod trie;
 mod two_sum;
+mod word_search;
