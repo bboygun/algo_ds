@@ -23,6 +23,7 @@ mod rotate_array;
 mod rotate_image;
 mod rotting_oranges;
 mod search_at_2d_matrix;
+mod search_insert_position;
 mod set_matrix_zeroes;
 mod sliding_window_maximum;
 mod spiral_matrix;
