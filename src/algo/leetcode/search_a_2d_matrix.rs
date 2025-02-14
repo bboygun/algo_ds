@@ -24,18 +24,12 @@ fn search_matrix(matrix: Vec<Vec<i32>>, target: i32) -> bool {
     let (m, n) = (matrix.len(), matrix[0].len());
     let (mut top, mut bottom) = (0, m);
 
-    while top <= bottom && top < m {
+    while top < bottom {
         let mid = top + (bottom - top) / 2;
         match matrix[mid][0].cmp(&target) {
             Ordering::Equal => return true,
             Ordering::Less => top = mid + 1,
-            Ordering::Greater => {
-                if mid > 0 {
-                    bottom = mid - 1;
-                } else {
-                    break;
-                }
-            }
+            Ordering::Greater => bottom = mid,
         }
     }
 
@@ -46,18 +40,12 @@ fn search_matrix(matrix: Vec<Vec<i32>>, target: i32) -> bool {
     let row = top - 1;
     let (mut left, mut right) = (0, n);
 
-    while left <= right && left < n {
+    while left < right {
         let mid = left + (right - left) / 2;
         match matrix[row][mid].cmp(&target) {
             Ordering::Equal => return true,
             Ordering::Less => left = mid + 1,
-            Ordering::Greater => {
-                if mid > 0 {
-                    right = mid - 1;
-                } else {
-                    break;
-                }
-            }
+            Ordering::Greater => right = mid,
         }
     }
 
