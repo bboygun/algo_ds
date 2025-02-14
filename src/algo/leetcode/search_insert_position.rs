@@ -25,7 +25,7 @@ use std::cmp::Ordering;
 fn search_insert(nums: Vec<i32>, target: i32) -> i32 {
     let (mut left, mut right) = (0, nums.len());
 
-    while left <= right && left < nums.len() {
+    while left < right && left < nums.len() {
         let mid = left + (right - left) / 2;
         match nums[mid].cmp(&target) {
             Ordering::Equal => return mid as i32,
