@@ -24,6 +24,7 @@ mod rotate_image;
 mod rotting_oranges;
 mod search_a_2d_matrix;
 mod search_at_2d_matrix;
+mod search_in_rotated_sorted_array;
 mod search_insert_position;
 mod search_range;
 mod set_matrix_zeroes;
