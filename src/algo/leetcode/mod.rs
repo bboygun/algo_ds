@@ -36,4 +36,5 @@ mod subset;
 mod three_sum;
 mod trie;
 mod two_sum;
+mod valid_parentheses;
 mod word_search;
