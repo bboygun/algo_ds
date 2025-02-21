@@ -2,6 +2,7 @@ mod alternating_groups;
 mod combination_sum;
 mod container_with_most_water;
 mod course_schedule;
+mod daily_temperatures;
 mod decode_string;
 mod find_all_anagrams_in_a_string;
 mod find_minimum_in_rotated_sorted_array;
